@@ -45,6 +45,34 @@ flex-direction: column;
 
 #sign-in .logo{
     margin-bottom: 8vh;
+    animation-name: mylogo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    position: relative;
+}
+@keyframes mylogo{
+    0%{
+        top: 0px;
+        left: 0px;
+    }
+    25%{
+        top: 5px;
+        left: 0px;
+    }
+    50%{
+        top: 10px;
+        left: 0px;
+    }
+    75%{
+        top: 15px;
+        left: 0px;
+    }
+    100%{
+        top: 20px;
+        left: 0px;
+    }
 }
 
 #sign-in .logo img{
@@ -61,7 +89,9 @@ flex-direction: column;
     font-size: 1rem;
     font-weight: 500;
     line-height: 2rem;
+    
 }
+
 
 #sign-in .text-input{
     margin-bottom: 1.3rem;
@@ -138,11 +168,41 @@ flex-direction: column;
     width: 100%;
     color:#fff;
     margin-bottom: 1.5rem;
+    animation-name: myheading;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
+
+@keyframes myheading{
+    0%{
+        transform: translate(0px);
+    }
+    25%{
+        transform: translate(10px);
+    }
+    50%{
+        transform: translate(20px);
+    }
+    75%{
+        transform: translate(30px);
+    }
+    100%{
+        transform: translate(40px);
+    }
+}
+
 
 #showcase .secondary-btn{
     width: 60%;
     margin: auto;
+    transition-property: all;
+    transition-duration: 1.5s;
+    transition-timing-function: linear;
+}
+#showcase .secondary-btn:hover{
+    transform: scale(1.15);
 }
 /* utility classes */
 .primary-btn{
